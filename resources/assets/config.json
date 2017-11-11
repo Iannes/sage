@@ -6,7 +6,10 @@
     ],
     "customizer": [
       "./scripts/customizer.js"
-    ]
+    ],
+    "scripts": [
+      "./scripts/scripts.js"
+    ],
   },
   "publicPath": "/app/themes/sage",
   "devUrl": "http://example.dev",

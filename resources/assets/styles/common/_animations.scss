@@ -1,0 +1,18 @@
+
+.fade-in {
+  animation: fadeIn ease-in 1s;
+}
+
+.fade-out {
+  animation: fadeOut ease-in-out .6s;
+}
+
+.slide-up {
+  animation: slideUp ease-out .8s;
+}
+.slide-down {
+  animation: slideDown ease-in-out .8s;
+}
+.slide-right {
+  animation: slideRight linear .8s;
+}

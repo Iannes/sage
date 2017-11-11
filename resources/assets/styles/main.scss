@@ -1,4 +1,6 @@
 @import "common/variables";
+@import "common/reset";
+@import "common/mixins";
 
 /** Import everything from autoload */
 @import "./autoload/**/*";
@@ -13,10 +15,17 @@
 
 /** Import theme styles */
 @import "common/global";
+@import "common/keyframes";
+@import "common/animations";
+@import "common/banner";
+
+// Components
 @import "components/buttons";
 @import "components/comments";
 @import "components/forms";
 @import "components/wp-classes";
+
+// Layouts
 @import "layouts/header";
 @import "layouts/sidebar";
 @import "layouts/footer";

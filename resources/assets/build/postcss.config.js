@@ -10,6 +10,7 @@ module.exports = ({ file, options }) => {
     plugins: {
       cssnano: options.enabled.optimize ? cssnanoConfig : false,
       autoprefixer: true,
+      lost:true,
     },
   };
 };

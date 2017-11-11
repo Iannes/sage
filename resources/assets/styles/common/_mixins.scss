@@ -1,0 +1,103 @@
+$tablet-width: 768px;
+$small-screen-width: 920px;
+$tablet-portrait-width: 1100px;
+$laptop-width: 1440px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$tablet-portrait-width - 1px}) {
+    @content;
+  }
+}
+@mixin laptops {
+  @media (min-width: #{$small-screen-width}) and (max-width: #{$laptop-width - 1px}) {
+    @content;
+  }
+}
+@mixin small-screens {
+  @media (max-width: #{$small-screen-width}) {
+    @content;
+  }
+}
+@mixin medium-screens {
+  @media (max-width: #{$tablet-portrait-width}) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait {
+  @media (min-width: #{$tablet-portrait-width}) {
+    @content;
+  }
+}
+
+@mixin triangle($triangle-color) {
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: 0px;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left:20px solid $triangle-color;
+  background-color: #fff;
+}
+
+@mixin cellBorder($cellNumber) {
+  &:after {
+    content: '';
+    height: calc(65px * ($cellNumber) + 15px); //You can change this if you want smaller/bigger borders
+    width: 1px;
+    position: absolute;
+    right: 0;
+    top: 0; // If you want to set a smaller height and center it, change this value
+    background-color: #eee; // The color of your border
+  }
+}
+
+@mixin square($square-color) {
+    content: '';
+    width: 14px;
+    height: 14px;
+    display: flex;
+    margin: 5px 10px 25px 20px;
+    background: $square-color;
+
+}
+
+@mixin animation($percentage) {
+  @keyframes slide {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: $percentage;
+    }
+  }
+}
+
+// Sass Breakpoints
+
+@mixin for-size($size) {
+  @if $size == phone-only {
+    @media (max-width: 599px) { @content; }
+  } @else if $size == tablet-portrait-up {
+    @media (min-width: 600px) { @content; }
+  } @else if $size == up-to-640 {
+    @media (max-width: 640px) { @content; }
+  } @else if $size == up-to-768 {
+    @media (max-width: 768px) { @content; }
+  } @else if $size == tablet-landscape-up {
+    @media (min-width: 900px) { @content; }
+  } @else if $size == up-until-tablet {
+    @media (max-width: 1024px) { @content; }
+  }  @else if $size == laptop {
+    @media (max-width: 1200px) { @content; }
+  }@else if $size == desktop-up {
+    @media (min-width: 1201px) { @content; }
+  } @else if $size == big-desktop-up {
+  @media (min-width: 1500px) { @content; }
+  } @else if $size == extra-large {
+  @media (min-width: 1800px) { @content; }
+  }
+}

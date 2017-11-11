@@ -1,0 +1,63 @@
+.hero__banner {
+  width: 100vw;
+  height: 100vh;
+  .banner__image {
+    position: absolute;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size:  cover;
+    background-color: rgb(211, 22, 22);
+    opacity: 1;
+    z-index:5;
+    .banner__text {
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      width: 80%;
+      @include for-size(up-to-768) {
+        width: 90%;
+        bottom: 10%;
+        position: relative;
+        align-self:center;
+      }
+      .banner__text-heading  {
+        h1 {
+          width: 60%;
+          color: #fff;
+          font-size: 42px;
+          line-height: 46px;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          @include for-size(up-to-768) {
+            width: 100%;
+            font-size: 22px;
+            line-height: 28px;
+          }
+        }
+        .banner__text-quotee {
+          position: relative;
+          width: 100%;
+          margin-top: 10px;
+          margin-bottom: 25px;
+          float: left;
+          font-family: Roboto, sans-serif;
+          color: #fff;
+          font-size: 16px;
+          text-transform: none;
+          .quotee__name {
+            font-weight: 300;
+          }
+          .quotee__job {
+            font-weight: 300;
+            letter-spacing: 2px;
+            font-size: 16px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+}
