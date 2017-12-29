@@ -13,6 +13,16 @@
  */
 // @import "~some-node-module";
 
+
+// Import Slick
+@import "~slick-carousel/slick/slick.scss";
+@import "~slick-carousel/slick/slick-theme.scss";
+
+// Import mmenu
+@import "~jquery.mmenu/dist/jquery.mmenu.all.css";
+
+
+
 /** Import theme styles */
 @import "common/global";
 @import "common/keyframes";
