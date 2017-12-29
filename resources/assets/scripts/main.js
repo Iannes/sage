@@ -4,6 +4,10 @@ import 'jquery';
 // Import everything from autoload
 import "./autoload/**/*"
 
+// Import Slick and Mmenu
+import 'slick-carousel/slick/slick.min';
+import "jquery.mmenu/dist/jquery.mmenu.all.js";
+
 // import local dependencies
 import Router from './util/Router';
 import common from './routes/common';
