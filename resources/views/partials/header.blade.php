@@ -8,15 +8,35 @@ if ($_SERVER['WP_ENV'] == 'development') {
 @endphp  --}}
 
 <header class="banner">
-  <div class="container">
-    <a href="/">
-      {{--  <img src="@asset('images/logo.svg')" width="140" alt="Logo">  --}}
-      LOGO
-    </a>
-    <nav class="nav-primary">
+
+  <section class="navigation-bar">
+
+      <div class="container logo-container">
+
+        <a href="/">
+          {{--  <img src="@asset('images/logo.svg')" width="140" alt="Logo">  --}}
+          LOGO
+        </a>
+
+        <nav class="nav-primary">
+          @if (has_nav_menu('primary_navigation'))
+            {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
+          @endif
+        </nav>
+
+        <div class="mobile-menu--trigger">
+            <span class="line line-1"></span>
+            <span class="line line-2"></span>
+            <span class="line line-3"></span>
+          </div>
+      </div>
+
+  </section>
+
+  <div id="mobile-nav">
       @if (has_nav_menu('primary_navigation'))
-        {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
+        {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav']) !!}
       @endif
-    </nav>
   </div>
+
 </header>
