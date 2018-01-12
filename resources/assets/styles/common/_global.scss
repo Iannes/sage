@@ -38,3 +38,12 @@ h1 {
 .black {
     background: black!important;
 }
+
+.nojs {
+    opacity: 0; /* start hidden, no flash of content */
+    animation-name: reveal;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+  }
