@@ -1,5 +1,12 @@
 
-    
+// ====================================================================
+//  VARIABLES
+// ====================================================================     
+
+      let body = $("body")    
+      body.removeClass('nojs').addClass('fade-in').css('opacity', 1)
+
+
       $('.slider').slick({
         slidesToShow: 1,
         infinite: true,
